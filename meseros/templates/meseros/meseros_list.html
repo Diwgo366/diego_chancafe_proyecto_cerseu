@@ -1,9 +1,8 @@
 {% extends 'meseros/base_generic.html' %}
 
 {% block content %}
-
+    <p>Lista de meseros</p>
     <div>{% for mesero in data %}
-        <p>Lista de meseros</p>
         <p>El mesero <strong>{{mesero.nombre}}</strong> tiene <strong>{{ mesero.edad }}</strong> y viene de <strong>{{ mesero.nacionalidad }}</strong></p>
     {% endfor %}</div>
 
