@@ -1,0 +1,9 @@
+{% extends 'meseros/base_generic.html' %}
+
+{% block content %}
+    <h1>Lista de meseros</h1>
+    <div>{% for mesero in data %}
+        <p>El mesero <strong>{{mesero.nombre}}</strong> ahora tiene <strong>{{ mesero.edad }}</strong></p>
+    {% endfor %}</div>
+
+{% endblock %}

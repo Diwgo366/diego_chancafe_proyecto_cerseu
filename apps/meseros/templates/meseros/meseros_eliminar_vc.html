@@ -1,0 +1,10 @@
+{% extends 'meseros/base_generic.html' %}
+
+{% block content %}
+  <h1>Eliminar mesero</h1>
+    <p>¿Deseas eliminar a <strong>{{ object.nombre }}</strong> de la lista de meseros?</p>
+  <form method="post">
+    {% csrf_token %}
+    <input type="submit" value="Sí">
+  </form>
+{% endblock %}

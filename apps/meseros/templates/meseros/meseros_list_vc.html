@@ -1,0 +1,14 @@
+{% extends 'meseros/base_generic.html' %}
+
+{% block content %}
+    <h1>Lista de meseros en una vista basada en clase:</h1>
+    <div>{% for mesero in object_list %}
+        <p>El mesero <strong>{{mesero.nombre}}</strong> tiene <strong>{{ mesero.edad }}</strong> y viene de <strong>{{ mesero.nacionalidad }}</strong></p>
+        <form action="{% url 'meseros_editar_vc' mesero.pk %}" method="get" style="display: inline;">
+            <button type="submit" class="btn btn-primary">Editar</button>
+        </form>
+        <form action="{% url 'meseros_eliminar_vc' mesero.pk %}" method="get" style="display: inline;">
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+        </form>
+    {% endfor %}</div>
+{% endblock %}
